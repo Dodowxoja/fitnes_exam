@@ -4,6 +4,7 @@ class ColorConst {
   static Color kPrimaryColor = Colors.black;
   static Color kPColor1 = const Color(0xFF9DCEFF);
   static Color kPColor2 = const Color(0xFF92A3FD);
+  static Color kPTextColor1 = const Color(0xFFADA4A5);
 }
 
 class TextConst {
@@ -17,6 +18,30 @@ class TextConst {
   static String text1 = 'Welcome Back';
   static String text2 = 'Forgot your password?';
   static String text3 = 'Don’t have an account yet?';
+
+  static String wTextR0 = 'View more';
+  static String wText1 = "Daily Workout Schedule";
+  static String wText2 = 'Upcoming Workout';
+  static String wText3 = 'See more';
+  static String wTextR4 = 'Fullbody Workout';
+  static String wText5 = 'Today, 03:00pm';
+  static String wText6 = 'Upperbody Workout';
+  static String wText7 = 'June 05, 02:00pm';
+  static String wText8 = 'What Do You Want to Train';
+  static String wText11 = 'Lowebody Workout';
+  static String wText12 = '12 Exercises | 40mins';
+  static String wText13 = 'AB Workout';
+  static String wText14 = '14 Exercises | 20mins';
+
+  static String dText1 = '';
+  static String dText2 = '';
+  static String dText3 = '';
+  static String dText4 = '';
+  static String dText5 = '';
+  static String dText6 = '';
+  static String dText7 = '';
+  static String dText8 = '';
+  static String dText9 = '';
 }
 
 class FontConst {

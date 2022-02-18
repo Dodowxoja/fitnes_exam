@@ -10,3 +10,16 @@ class MyMessenger {
         ),
       );
 }
+
+class MyText {
+  static text(String type, {Color? color, double? size, FontWeight? fWeight}) {
+    return Text(
+      type,
+      style: TextStyle(
+        color: color,
+        fontSize: size,
+        fontWeight: fWeight,
+      ),
+    );
+  }
+}

@@ -214,8 +214,11 @@ class _SignInPageState extends State<SignInPage> {
       for (var userpass in UsersInfo.users) {
         if (userpass.email == _emailController.text &&
             userpass.password == _passwordController.text) {
-          Navigator.pushReplacementNamed(context, '/home',
-              arguments: userpass.lName);
+          Navigator.pushReplacementNamed(
+            context,
+            '/home',
+            arguments: [userpass.lName, userpass.fName, userpass.email],
+          );
           return true;
         }
       }
