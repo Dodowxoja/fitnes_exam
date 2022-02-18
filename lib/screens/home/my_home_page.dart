@@ -79,8 +79,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ListTile(
                 leading: CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage(
-                    'assets/images/home/wp1.png',
+                  child: Image(
+                    image: AssetImage('assets/images/home/wp1.png'),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -89,8 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ListTile(
                 leading: CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage(
-                    'assets/images/home/wp1.png',
+                  child: Image(
+                    image: AssetImage('assets/images/home/wp2.png'),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

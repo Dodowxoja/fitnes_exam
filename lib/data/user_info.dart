@@ -7,6 +7,7 @@ class UsersInfo {
         lName: 'Admin_l',
         email: 'admin@email.com',
         password: 'admin'),
+    Model(fName: 'a', lName: 'a', email: 'a', password: 'a'),
   ];
 
   static Model? currentUser;
