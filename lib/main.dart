@@ -1,11 +1,11 @@
+import 'package:fitnes/routes/my_route.dart';
 import 'package:flutter/material.dart';
-import 'screens/my_home_page.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+  MyApp({Key? key}) : super(key: key);
+  final MyRoute _myRoute = MyRoute();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      onGenerateRoute: _myRoute.onGenerateRoute,
+      initialRoute: '/',
     );
   }
 }
+
+//Icon(Icons.more_horiz_outlined)
