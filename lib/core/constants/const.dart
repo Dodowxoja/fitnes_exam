@@ -30,6 +30,7 @@ class TextConst {
   static String wText6 = 'Upperbody Workout';
   static String wText7 = 'June 05, 02:00pm';
   static String wText8 = 'What Do You Want to Train';
+  static String wText10 = '11 Exercises | 32mins';
   static String wText11 = 'Lowebody Workout';
   static String wText12 = '12 Exercises | 40mins';
   static String wText13 = 'AB Workout';

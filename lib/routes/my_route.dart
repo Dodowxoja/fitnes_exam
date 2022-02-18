@@ -18,7 +18,11 @@ class MyRoute {
       case '/home':
         return MaterialPageRoute(builder: (context) => const MyHomePage());
       case '/details':
-        return MaterialPageRoute(builder: (context) => const DetailsPage());
+        return MaterialPageRoute(
+          builder: (context) => DetailsPage(
+            name: (args as String),
+          ),
+        );
     }
   }
 }
