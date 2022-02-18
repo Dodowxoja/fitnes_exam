@@ -5,6 +5,8 @@ class ColorConst {
   static Color kPColor1 = const Color(0xFF9DCEFF);
   static Color kPColor2 = const Color(0xFF92A3FD);
   static Color kPTextColor1 = const Color(0xFFADA4A5);
+  static Color kPSwitchColor1 = const Color(0xFFC58BF2);
+  static Color kPSwitchColor2 = const Color(0xFFEEA4CE);
 }
 
 class TextConst {
