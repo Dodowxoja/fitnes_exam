@@ -2,7 +2,6 @@ import 'package:fitnes/core/constants/const.dart';
 import 'package:fitnes/widgets/scaffold_massenger.dart';
 import 'package:flutter/material.dart';
 
-constants
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -11,6 +10,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool sTitle1 = true;
+  bool sTitle2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'assets/images/home/wp1.png',
               TextConst.wTextR4,
               TextConst.wText5,
-              '1',
+              sTitle1,
               lSize: 30,
               rSize: 30,
             ),
@@ -86,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'assets/images/home/wp2.png',
               TextConst.wText6,
               TextConst.wText7,
-              '2',
+              sTitle2,
               lSize: 30,
               rSize: 30,
               tSize: 15,
@@ -109,17 +110,20 @@ class _MyHomePageState extends State<MyHomePage> {
     String img,
     String text1,
     String text2,
-    String _radioValue, {
+    bool state, {
     double tSize = 0,
     double bSize = 0,
     double lSize = 0,
     double rSize = 0,
-    bool offOn = false,
   }) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      margin:
-          EdgeInsets.only(left: lSize, right: rSize, top: tSize, bottom: bSize),
+      margin: EdgeInsets.only(
+        left: lSize,
+        right: rSize,
+        top: tSize,
+        bottom: bSize,
+      ),
       child: Container(
         height: 80,
         alignment: Alignment.center,
@@ -138,8 +142,14 @@ class _MyHomePageState extends State<MyHomePage> {
             thumbColor: MaterialStateColor.resolveWith(
               (states) => Colors.white,
             ),
-            value: offOn,
-            onChanged: (v) => setState(() => offOn = !offOn),
+            onChanged: (v) {
+              setState(() {
+                debugPrint('$state');
+                state = v;
+                debugPrint('$state');
+              });
+            },
+            value: state,
           ),
         ),
       ),
