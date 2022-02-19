@@ -20,7 +20,7 @@ class MyRoute {
       case '/details':
         return MaterialPageRoute(
           builder: (context) => DetailsPage(
-            name: (args as String),
+            name1: (args as String),
           ),
         );
     }

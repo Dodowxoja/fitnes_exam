@@ -49,11 +49,8 @@ class MyContainer {
                     child: MyText.text(TextConst.wTextR0,
                         color: ColorConst.kPColor1),
                     onPressed: () {
-                      Navigator.pushNamed(
-                        context,
-                        '/details',
-                        arguments: text1,
-                      );
+                      Navigator.pushNamed(context, '/details',
+                          arguments: text1);
                     },
                   ),
                 )

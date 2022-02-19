@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 80,
                       alignment: Alignment.center,
                       child: ListTile(
-                        leading: ava('assets/images/home/wp1.png'),
+                        leading: MyHomeAva.ava('assets/images/home/wp1.png'),
                         title: MyText.text(TextConst.wTextR4,
                             size: 12, fWeight: FontWeight.w500),
                         subtitle: MyText.text(TextConst.wText5, size: 10),
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 80,
                       alignment: Alignment.center,
                       child: ListTile(
-                        leading: ava('assets/images/home/wp2.png'),
+                        leading: MyHomeAva.ava('assets/images/home/wp2.png'),
                         title: MyText.text(TextConst.wText6,
                             size: 12, fWeight: FontWeight.w500),
                         subtitle: MyText.text(TextConst.wText7, size: 10),
@@ -171,58 +171,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  CircleAvatar ava(String avaName) {
-    return CircleAvatar(
-      radius: 50,
-      child: Image(
-        image: AssetImage(avaName),
-        fit: BoxFit.contain,
-      ),
-    );
-  }
-
-  wCard(
-    String img,
-    String text1,
-    String text2,
-    bool state, {
-    double tSize = 0,
-    double bSize = 0,
-    double lSize = 0,
-    double rSize = 0,
-  }) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      margin: EdgeInsets.only(
-        top: tSize,
-        bottom: bSize,
-      ),
-      child: Container(
-        height: 80,
-        alignment: Alignment.center,
-        child: ListTile(
-          leading: CircleAvatar(
-            radius: 50,
-            child: Image(
-              image: AssetImage(img),
-              fit: BoxFit.contain,
-            ),
-          ),
-          title: MyText.text(text1, size: 12, fWeight: FontWeight.w500),
-          subtitle: MyText.text(text2, size: 10),
-          trailing: Switch(
-            activeTrackColor: ColorConst.kPSwitchColor1,
-            thumbColor: MaterialStateColor.resolveWith(
-              (states) => Colors.white,
-            ),
-            onChanged: (v) => setState(() => state = !state),
-            value: state,
-          ),
         ),
       ),
     );

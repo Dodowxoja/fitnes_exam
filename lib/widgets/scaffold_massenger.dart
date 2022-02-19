@@ -23,3 +23,15 @@ class MyText {
     );
   }
 }
+
+class MyHomeAva {
+  static CircleAvatar ava(String avaName) {
+    return CircleAvatar(
+      radius: 50,
+      child: Image(
+        image: AssetImage(avaName),
+        fit: BoxFit.contain,
+      ),
+    );
+  }
+}
